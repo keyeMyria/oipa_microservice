@@ -2,126 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b54d6d4d-4d08-4587-845b-286e1cde48c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/data_backup/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/data_backup/admin_0_countries.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/data_backup/admin_1_regions.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/data_backup/cities.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/data_backup/country_center.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/data_backup/country_data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/data_backup/country_regions.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/data_backup/one_country.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/data_backup/region_center_locations.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/data_backup/urbnnrs_alt_country_name.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/importer/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/importer/admin1region.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/importer/city.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/importer/common.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/importer/country.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/importer/region.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/importer/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/importer/tests/test_admin1_regions_import.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/importer/tests/test_city_import.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/importer/tests/test_country_import.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/importer/tests/test_region_import.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/migrations/0002_region_added_manually.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/migrations/0003_remove_region_added_manually.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/geodata/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/activity_aggregation_calculation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/activity_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/location_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0002_auto_20170424_1434.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0003_auto_20170529_1038.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0004_activityparticipatingorganisation_org_activity_obj.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0005_auto_20180430_1400.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0006_activityparticipatingorganisation_crs_channel_code.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0007_activitytag.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0008_auto_20180710_1547.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0009_auto_20180710_1747.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0010_documentlink_result.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0011_documentlink_result_indicator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0012_auto_20180720_1221.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0013_documentlink_period_target.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0014_documentlink_period_actual.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0015_resultreference.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0016_resultindicator_aggregation_status.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0017_location_result_indicator_baseline.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0018_auto_20180726_1658.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/0019_resultindicatorbaselinedimension.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/OIPA: The IATI Data-engine.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/organisation_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/permissions/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/permissions/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/permissions/migrations/0002_auto_20180430_1400.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/permissions/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/permissions/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/transaction/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/transaction/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati/transaction/transaction_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_codelists/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_codelists/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_codelists/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_codelists/migrations/0002_auto_20170704_1500.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_codelists/migrations/0003_auto_20170704_1525.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_codelists/migrations/0004_auto_20180430_1400.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_codelists/migrations/0005_tagvocabulary.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_codelists/migrations/0006_auto_20180710_1031.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_codelists/migrations/0007_auto_20180710_1130.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_codelists/migrations/0008_delete_tagvocabulary.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_codelists/migrations/0009_auto_20180711_1247.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_codelists/migrations/0010_aidtype_vocabulary.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_codelists/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_codelists/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_codelists/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_organisation/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_organisation/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_organisation/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_organisation/migrations/0002_auto_20180430_1400.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_organisation/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_organisation/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_organisation/organisation_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_organisation/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_synchroniser/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_synchroniser/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_synchroniser/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_synchroniser/migrations/0002_auto_20170529_1038.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_synchroniser/migrations/0003_auto_20170602_1530.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_synchroniser/migrations/0004_auto_20170611_1546.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_synchroniser/migrations/0005_auto_20170613_1414.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_synchroniser/migrations/0006_datasetnote_variable.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_synchroniser/migrations/0007_auto_20170621_0049.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_synchroniser/migrations/0008_auto_20171106_1141.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_synchroniser/migrations/0009_auto_20180430_1400.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_synchroniser/migrations/0010_auto_20180625_1427.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_synchroniser/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_synchroniser/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_synchroniser/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_vocabulary/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_vocabulary/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_vocabulary/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_vocabulary/migrations/0002_auto_20180430_1400.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_vocabulary/migrations/0003_tagvocabulary.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_vocabulary/migrations/0004_aidtypevocabulary.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_vocabulary/migrations/0005_resultvocabulary.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_vocabulary/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_vocabulary/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_db/iati_vocabulary/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_graphql/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oipa_sso/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,31 +25,31 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="LICENSE" value="1" />
-          <entry key="gitignore" value="4" />
-          <entry key="md" value="1" />
-          <entry key="py" value="5" />
+          <entry key="gitignore" value="6" />
+          <entry key="md" value="2" />
+          <entry key="py" value="6" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="8" />
-          <entry key="Python" value="5" />
+          <entry key="Markdown" value="2" />
+          <entry key="PLAIN_TEXT" value="10" />
+          <entry key="Python" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="gitignore" value="54" />
-          <entry key="md" value="287" />
+          <entry key="gitignore" value="60" />
+          <entry key="md" value="299" />
           <entry key="py" value="24" />
           <entry key="txt" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="287" />
-          <entry key="PLAIN_TEXT" value="67" />
+          <entry key="Markdown" value="299" />
+          <entry key="PLAIN_TEXT" value="73" />
           <entry key="Python" value="24" />
         </counts>
       </usages-collector>
@@ -176,31 +58,22 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/oipa_microservice/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="120">
+                <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="120">
-                <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="457">
+              <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -220,10 +93,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/oipa_microservice/settings.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -362,13 +235,6 @@
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="105" column="19" selection-start-line="105" selection-start-column="19" selection-end-line="105" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/oipa_microservice/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="452">
@@ -383,13 +249,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/oipa_db/iati/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="120">
-            <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+            <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
         </state>
       </provider>
     </entry>
