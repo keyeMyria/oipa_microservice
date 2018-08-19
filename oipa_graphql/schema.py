@@ -23,11 +23,10 @@ class Activity(DjangoObjectType):
 
     def resolve_title(self, args, context, info):
         try:
-            narratives = TitleModel.objects.get(
-                activity_id=self.id).narratives.all()
+            narrative = TitleModel.objects.get(
+                activity_id=self.id).narratives.first()
 
-            if narratives:
-                return narratives[0].content
+            return narrative.content if narrative else ''
 
         except TitleModel.DoesNotExist:
             pass
