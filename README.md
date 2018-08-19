@@ -3,7 +3,7 @@ Concept OIPA Microservice
 
 Service-oriented Architecture (SOA):
 - OIPA Database: oipa_db
-- OIAP Parse IATI XML File: oipa_parser
+- OIPA Parse IATI XML File: oipa_parser
 - OIPA GraphQL: oipa_graphql
 - OIPA REST API: oipa_api
 - OIPA Single Sign-on: oipa_sso
