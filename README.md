@@ -7,4 +7,4 @@ Service-oriented Architecture (SOA):
 - OIPA GraphQL: oipa_graphql
 - OIPA REST API: oipa_api
 - OIPA Single Sign-on: oipa_sso
-- OIPA Fulltext Search: oipa_search
+- OIPA Fulltext Search Engine: oipa_search
