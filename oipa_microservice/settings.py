@@ -37,12 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'graphene_django',
+    'django_filters',
     'oipa_db.geodata',
     'oipa_db.iati',
     'oipa_db.iati_synchroniser',
     'oipa_db.iati_organisation',
     'oipa_db.iati_codelists',
     'oipa_db.iati_vocabulary',
+    'oipa_graphql',
 ]
 
 MIDDLEWARE = [
@@ -129,9 +132,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
+# GraphQL setting
+GRAPHENE = {
+    'SCHEMA': 'oipa_graphql.schema.schema'
+}
+
 # Local settings
 
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError:
     pass
