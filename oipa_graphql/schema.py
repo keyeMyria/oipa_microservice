@@ -1,4 +1,5 @@
 import graphene
+import django_filters
 from graphene import relay, ObjectType
 from graphene_django import DjangoObjectType
 from graphene_django.filter import DjangoFilterConnectionField
@@ -38,9 +39,24 @@ class ActivityNode(DjangoObjectType):
         return Transaction.objects.filter(activity_id=self.id)
 
 
+class ActivityFilter(django_filters.FilterSet):
+    reporting_organisation = django_filters.CharFilter(
+        method='filter_reporting_organisation')
+
+    class Meta:
+        model = Activity
+        fields = ['reporting_organisation', ]
+
+    def filter_reporting_organisation(self, queryset, name, value):
+        return queryset.filter(
+            reporting_organisations__organisation__organisation_identifier
+            =value)
+
+
 class Query(ObjectType):
     activity = relay.Node.Field(ActivityNode)
-    activities = DjangoFilterConnectionField(ActivityNode)
+    activities = DjangoFilterConnectionField(
+        ActivityNode, filterset_class=ActivityFilter)
 
 
 schema = graphene.Schema(query=Query)
