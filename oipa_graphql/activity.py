@@ -16,8 +16,8 @@ class TransactionNode(DjangoObjectType):
 
 
 class CountryNode(DjangoObjectType):
-    polygon = graphene.String()
-    center_longlat = graphene.String()
+    polygon = graphene.JSONString()
+    center_longlat = graphene.JSONString()
 
     class Meta:
         model = Country
