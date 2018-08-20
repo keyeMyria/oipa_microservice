@@ -20,7 +20,6 @@ class ActivityNode(DjangoObjectType):
 
     class Meta:
         model = Activity
-        filter_fields = ['iati_identifier', ]
         interfaces = (relay.Node, )
 
     def resolve_title(self, args, context, info):
@@ -45,7 +44,7 @@ class ActivityFilter(django_filters.FilterSet):
 
     class Meta:
         model = Activity
-        fields = ['reporting_organisation', ]
+        fields = ['iati_identifier', 'reporting_organisation', ]
 
     def filter_reporting_organisation(self, queryset, name, value):
         name = 'reporting_organisations__organisation__organisation_identifier'
