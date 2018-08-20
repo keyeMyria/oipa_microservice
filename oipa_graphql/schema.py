@@ -48,9 +48,8 @@ class ActivityFilter(django_filters.FilterSet):
         fields = ['reporting_organisation', ]
 
     def filter_reporting_organisation(self, queryset, name, value):
-        return queryset.filter(
-            reporting_organisations__organisation__organisation_identifier
-            =value)
+        name = 'reporting_organisations__organisation__organisation_identifier'
+        return queryset.filter(**{name: value})
 
 
 class Query(ObjectType):
