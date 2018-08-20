@@ -1,5 +1,5 @@
 import graphene
-import django_filters
+from django_filters import FilterSet, CharFilter
 from graphene import relay, ObjectType
 from graphene_django import DjangoObjectType
 from graphene_django.filter import DjangoFilterConnectionField
@@ -38,8 +38,8 @@ class ActivityNode(DjangoObjectType):
         return Transaction.objects.filter(activity_id=self.id)
 
 
-class ActivityFilter(django_filters.FilterSet):
-    reporting_organisation = django_filters.CharFilter(
+class ActivityFilter(FilterSet):
+    reporting_organisation = CharFilter(
         method='filter_reporting_organisation')
 
     class Meta:
