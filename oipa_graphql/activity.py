@@ -76,7 +76,12 @@ class ActivityFilter(FilterSet):
 
     class Meta:
         model = Activity
-        fields = ['iati_identifier', 'reporting_organisation', ]
+        fields = {
+            'iati_identifier': ['exact', ],
+            'reporting_organisation': ['exact', ],
+            'end_date': ['exact', 'gte', 'lte'],
+            'start_date': ['exact', 'gte', 'lte'],
+        }
 
     def filter_reporting_organisation(self, queryset, name, value):
         name = 'reporting_organisations__organisation__organisation_identifier'
