@@ -25,7 +25,13 @@ class TransactionListFilter(FilterSet):
 
 class TransactionSummaryNode(graphene.ObjectType):
     value = graphene.Float()
-    activity__recipient_country__code = graphene.String()
+    recipient_country_code = graphene.String()
+    recipient_country_name = graphene.String()
+
+    FIELDS_MAPPING = {
+        'recipientCountryCode': 'activity__recipient_country__code',
+        'recipientCountryName': 'activity__recipient_country__name'
+    }
 
     class Meta:
         interfaces = (relay.Node, )
@@ -46,13 +52,18 @@ class Query(object):
     )
 
     def resolve_transaction_summaries(self, context, **kwargs):
+        field_group_by = TransactionSummaryNode.FIELDS_MAPPING.get(
+            kwargs['groupBy'])
+        field_order_by = TransactionSummaryNode.FIELDS_MAPPING.get(
+            kwargs['orderBy'])
+
         results = Transaction.objects.\
-            values(kwargs['groupBy']).\
+            values(field_group_by).\
             annotate(value=Sum('value')).\
-            order_by(kwargs['orderBy'])
+            order_by(field_order_by)
 
         return [TransactionSummaryNode(
-            activity__recipient_country__code=result[
+            recipient_country_code=result[
                 'activity__recipient_country__code'],
             value=result['value']) for result in results
         ]
