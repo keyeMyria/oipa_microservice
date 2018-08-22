@@ -52,17 +52,18 @@ class Query(object):
     )
 
     def resolve_transaction_summaries(self, context, **kwargs):
-        field_group_by = TransactionSummaryNode.FIELDS_MAPPING.get(
-            kwargs['groupBy'])
-        field_order_by = TransactionSummaryNode.FIELDS_MAPPING.get(
-            kwargs['orderBy'])
+        field_mapping = TransactionSummaryNode.FIELDS_MAPPING
+        groups = [field_mapping.get(
+            group) for group in kwargs['groupBy'].split(',') if group]
+        orders = [field_mapping.get(
+            order) for order in kwargs['orderBy'].split(',') if order]
 
-        results = Transaction.objects.\
-            values(field_group_by).\
-            annotate(value=Sum('value')).\
-            order_by(field_order_by)
+        results = Transaction.objects.values(*groups).\
+            annotate(value=Sum('value')).order_by(*orders)
 
         return [TransactionSummaryNode(
+            recipient_country_name=result[
+                'activity__recipient_country__name'],
             recipient_country_code=result[
                 'activity__recipient_country__code'],
             value=result['value']) for result in results
