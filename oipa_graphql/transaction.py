@@ -4,7 +4,10 @@ from graphene import relay, String, List
 from graphene_django import DjangoObjectType
 from django_filters import FilterSet
 from oipa_db.iati.transaction.models import Transaction
-from oipa_graphql.utils import OrderedDjangoFilterConnectionField
+from oipa_graphql.utils import (
+    OrderedDjangoFilterConnectionField,
+    list_string_comma
+)
 
 
 class TransactionListNode(DjangoObjectType):
@@ -54,9 +57,11 @@ class Query(object):
     def resolve_transaction_summaries(self, context, **kwargs):
         field_mapping = TransactionSummaryNode.FIELDS_MAPPING
         groups = [field_mapping.get(
-            group) for group in kwargs['groupBy'].split(',') if group]
+            value) for value in list_string_comma(kwargs['groupBy'])
+        ]
         orders = [field_mapping.get(
-            order) for order in kwargs['orderBy'].split(',') if order]
+            value) for value in list_string_comma(kwargs['orderBy'])
+        ]
 
         results = Transaction.objects.values(*groups).\
             annotate(value=Sum('value')).order_by(*orders)

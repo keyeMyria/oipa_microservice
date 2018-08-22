@@ -23,3 +23,8 @@ class OrderedDjangoFilterConnectionField(DjangoFilterConnectionField):
             resolver, connection, qs, max_limit,
             enforce_first_or_last, root, info, **args
         )
+
+
+def list_string_comma(values):
+    return [value for value in values.split(',') if value]
+
