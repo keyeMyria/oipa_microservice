@@ -56,8 +56,9 @@ class Query(object):
         groups = [mapping.get(
             value) for value in list_string_comma(kwargs['groupBy'])
         ]
-        orders = [mapping.get(
-            value) for value in list_string_comma(kwargs['orderBy'])
+        orders = [('-' if '-' in value else '') + mapping.get(
+            value.replace('-', '')) for value in list_string_comma(
+                kwargs['orderBy'])
         ]
         results = Transaction.objects.values(*groups).\
             annotate(value=Sum('value')).order_by(*orders)
