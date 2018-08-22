@@ -10,7 +10,6 @@ from oipa_db.geodata.models import Country
 
 
 class TransactionNode(DjangoObjectType):
-
     class Meta:
         model = Transaction
 

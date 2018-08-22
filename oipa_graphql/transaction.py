@@ -11,14 +11,12 @@ from oipa_graphql.utils import (
 
 
 class TransactionListNode(DjangoObjectType):
-
     class Meta:
         model = Transaction
         interfaces = (relay.Node, )
 
 
 class TransactionListFilter(FilterSet):
-
     class Meta:
         model = Transaction
         fields = {
@@ -47,7 +45,6 @@ class Query(object):
         filterset_class=TransactionListFilter,
         orderBy=List(of_type=String)
     )
-
     transaction_summaries = graphene.List(
         TransactionSummaryNode,
         groupBy=String(),
@@ -62,14 +59,14 @@ class Query(object):
         orders = [mapping.get(
             value) for value in list_string_comma(kwargs['orderBy'])
         ]
-
         results = Transaction.objects.values(*groups).\
             annotate(value=Sum('value')).order_by(*orders)
 
-        return [TransactionSummaryNode(
-            recipientCountryCode=result[
-                'activity__recipient_country__name'],
-            recipientCountryName=result[
-                'activity__recipient_country__code'],
-            value=result['value']) for result in results
-        ]
+        nodes = []
+        for result in results:
+            node = TransactionSummaryNode(**{key: result[mapping.get(
+                key)] for key in list_string_comma(kwargs['groupBy'])})
+            node.value = result['value']
+            nodes.append(node)
+
+        return nodes
