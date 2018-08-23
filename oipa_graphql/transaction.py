@@ -25,7 +25,7 @@ class TransactionListFilter(FilterSet):
 
 
 class TransactionSummaryNode(graphene.ObjectType):
-    value = graphene.Float()
+    total_value = graphene.Float()
     recipientCountryCode = graphene.String()
     recipientCountryName = graphene.String()
 
@@ -56,18 +56,18 @@ class Query(object):
         groups = [mapping.get(
             value) for value in list_string_comma(kwargs['groupBy'])
         ]
-        orders = [('-' if '-' in value else '') + mapping.get(
+        orders = [('-' if '-' == value[0] else '') + mapping.get(
             value.replace('-', '')) for value in list_string_comma(
                 kwargs['orderBy'])
         ]
         results = Transaction.objects.values(*groups).\
-            annotate(value=Sum('value')).order_by(*orders)
+            annotate(total_value=Sum('value')).order_by(*orders)
 
         nodes = []
         for result in results:
             node = TransactionSummaryNode(**{key: result[mapping.get(
                 key)] for key in list_string_comma(kwargs['groupBy'])})
-            node.value = result['value']
+            node.total_value = result['total_value']
             nodes.append(node)
 
         return nodes
