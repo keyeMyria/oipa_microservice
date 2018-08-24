@@ -1,6 +1,6 @@
 import graphene
 from django.db.models import Sum
-from graphene import relay, String, List, Scalar
+from graphene import relay, String, List
 from graphene_django import DjangoObjectType
 from django_filters import FilterSet
 from oipa_db.iati.transaction.models import Transaction
@@ -46,7 +46,7 @@ class TransactionSummaryNode(graphene.ObjectType):
         filters = {}
         for field, filter_field in self.FIELDS_FILTER_MAPPING.items():
             value = kwargs.get(field)
-            if field:
+            if value:
                 filters[filter_field] = value
 
         return filters
