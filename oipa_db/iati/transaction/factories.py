@@ -6,7 +6,7 @@ from oipa_db.iati.factory.iati_factory import (
     ActivityFactory, CountryFactory, NoDatabaseFactory, RegionFactory,
     RegionVocabularyFactory, SectorFactory, SectorVocabularyFactory
 )
-from oipa_db.iati.transaction.models import (
+from oipa_db.iati.models import (
     Transaction, TransactionDescription, TransactionProvider,
     TransactionReceiver, TransactionRecipientCountry,
     TransactionRecipientRegion, TransactionSector, TransactionType
