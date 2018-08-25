@@ -4,8 +4,8 @@ from graphene import relay
 from graphene_django import DjangoObjectType
 from graphene_django.filter import DjangoFilterConnectionField
 
-from oipa_db.iati.models import Activity, Title, ActivityRecipientCountry
-from oipa_db.iati.transaction.models import Transaction
+from oipa_db.iati.models import Activity, Title, ActivityRecipientCountry, \
+    Transaction
 from oipa_db.geodata.models import Country
 
 

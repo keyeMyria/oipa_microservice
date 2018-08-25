@@ -2,7 +2,7 @@ import graphene
 from graphene import relay, String, List
 from graphene_django import DjangoObjectType
 from django_filters import FilterSet
-from oipa_db.iati.transaction.models import Transaction
+from oipa_db.iati.models import Transaction
 from oipa_graphql.utils import OrderedDjangoFilterConnectionField, SummaryNode
 
 
