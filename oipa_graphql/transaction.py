@@ -26,10 +26,13 @@ class TransactionSummaryNode(SummaryNode):
 
     Model = Transaction
     FIELDS_MAPPING = {
-        'recipientCountryCode': 'activity__recipient_country__code',
-        'recipientCountryName': 'activity__recipient_country__name'}
+        'recipientCountryCode':
+            'transactionrecipientcountry__country__code',
+        'recipientCountryName':
+            'transactionrecipientcountry__country__name'}
     FIELDS_FILTER_MAPPING = {
-        'recipientCountryCodeIn': 'activity__recipient_country__code__in', }
+        'recipientCountryCodeIn':
+            'transactionrecipientcountry__country__code__in', }
 
 
 class Query(object):
