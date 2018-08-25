@@ -5,3 +5,7 @@ djorm-ext-pgfulltext==0.10
 django-filter==1.1.0
 graphene-django==2.1.0
 psycopg2-binary==2.7.5
+django-rq==1.1.0
+requests==2.18.4
+lxml==4.2.1
+MechanicalSoup==0.10.0

@@ -1,9 +1,9 @@
 from django.test import TestCase
 from mock import MagicMock
 
-from geodata.factory.geodata_factory import CountryFactory, RegionFactory
-from geodata.importer.country import CountryImport
-from geodata.models import Country
+from oipa_db.geodata.factory.geodata_factory import CountryFactory, RegionFactory
+from oipa_db.geodata.importer.country import CountryImport
+from oipa_db.geodata.models import Country
 
 
 class CountryImportTestCase(TestCase):

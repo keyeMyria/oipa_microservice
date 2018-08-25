@@ -4,5 +4,5 @@ from django.apps import AppConfig
 
 
 class IatiConfig(AppConfig):
-    name = 'oipa_db.iati'
-    verbose_name = 'IATI'
+    name = 'oipa_db'
+    verbose_name = 'OIPA DB'

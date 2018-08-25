@@ -69,7 +69,7 @@ class Dataset(models.Model):
         return self.name
 
     def process(self, force_reparse=False):
-        from oipa_db.iati.parser.parse_manager import ParseManager
+        from iati.parser.parse_manager import ParseManager
         start_datetime = datetime.datetime.now()
 
         parser = ParseManager(self, force_reparse=force_reparse)
@@ -96,7 +96,7 @@ class Dataset(models.Model):
         """
         process a single activity
         """
-        from oipa_db.iati.parser.parse_manager import ParseManager
+        from iati.parser.parse_manager import ParseManager
         parser = ParseManager(self)
         parser.parse_activity(activity_id)
 

@@ -2,9 +2,9 @@ from django.contrib.gis.geos import fromstr
 from django.test import TestCase
 from mock import MagicMock
 
-from geodata.factory.geodata_factory import CityFactory, CountryFactory
-from geodata.importer.city import CityImport
-from geodata.models import City, Country
+from oipa_db.geodata.factory.geodata_factory import CityFactory, CountryFactory
+from oipa_db.geodata.importer.city import CityImport
+from oipa_db.geodata.models import City, Country
 
 data = {
     "type": "FeatureCollection",

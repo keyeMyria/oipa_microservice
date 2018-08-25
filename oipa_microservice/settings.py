@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_filters',
     'oipa_db.geodata',
     'oipa_db.iati',
+    'oipa_db.iati.transaction',
     'oipa_db.iati_synchroniser',
     'oipa_db.iati_organisation',
     'oipa_db.iati_codelists',
