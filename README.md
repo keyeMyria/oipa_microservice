@@ -1,5 +1,5 @@
 # oipa_microservice
-Concept OIPA Microservice
+OIPA Microservice
 
 Service-oriented Architecture (SOA):
 - OIPA Database: oipa_db
